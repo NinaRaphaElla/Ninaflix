@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "genre": [
+        {
+          "id": 1,
+          "name": "Action"
+        },
+        {
+          "id": 2,
+          "name": "Action & Adventure"
+        },
+        {
+          "id": 3,
+          "name": "Adventure"
+        },
+        {
+          "id": 4,
+          "name": "Animation"
+        },
+        {
+          "id": 5,
+          "name": "Biography"
+        },
+        {
+          "id": 6,
+          "name": "Comedy"
+        },
+        {
+          "id": 7,
+          "name": "Crime"
+        },
+        {
+          "id": 8,
+          "name": "Documentary"
+        },
+        {
+          "id": 9,
+          "name": "Drama"
+        },
+        {
+          "id": 10,
+          "name": "Family"
+        },
+        {
+          "id": 11,
+          "name": "Fantasy"
+        }
+      ]
+    }
+  ]
+}
