@@ -5,11 +5,11 @@ const Footer = () => {
     <>
       <div className="space-y-5 mt-96 mb-8">
         <div className="text-white text-sm flex justify-between px-96">
-          <p>Android App</p>
-          <p>Terms of service</p>
-          <p>Contact</p>
-          <p>Site map</p>
-          <p>FAQ</p>
+          <p className="hover:text-primary cursor-pointer">Android App</p>
+          <p className="hover:text-primary cursor-pointer">Terms of service</p>
+          <p className="hover:text-primary cursor-pointer">Contact</p>
+          <p className="hover:text-primary cursor-pointer">Site map</p>
+          <p className="hover:text-primary cursor-pointer">FAQ</p>
         </div>
 
         <div className="text-gray-500 text-xs text-center px-56">

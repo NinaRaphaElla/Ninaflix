@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#E31383",
+        primary: {
+          100: "#E31383",
+          200: "#FF6EC7",
+        },
         neutrals: {
           100: "#1E2129",
           200: "#292C34",
@@ -12,6 +15,7 @@ export default {
           400: "#404757",
         },
         white: "#EDEDED",
+        gray: "#eee5",
       },
     },
   },

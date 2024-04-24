@@ -12,7 +12,7 @@ const Popular = () => {
         <FaFilter size={24} className="hover:text-primary cursor-pointer" />
       </div>
 
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 transition-all ease-in-out duration-300 gap-4 mx-6 mt-24">
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 transition-all ease-in-out duration-300 gap-4 mx-6 mt-20">
         <Cards />
         <Cards />
         <Cards />

@@ -4,7 +4,7 @@ import data from "../../Data/data.json";
 
 import {
   RiSearchLine,
-  RiAccountCircleLine,
+  RiAccountCircleFill,
   RiMenuLine,
   RiHomeHeartFill,
   RiPlayCircleFill,
@@ -13,6 +13,8 @@ import {
   RiFireFill,
   RiArrowLeftSLine,
 } from "react-icons/ri";
+
+import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
   //state for search
@@ -23,50 +25,63 @@ const Header = () => {
 
   //state for menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const setMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  //change color nav
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
+
   return (
     <>
       {/* Header */}
-      <div className="bg-neutrals-200 py-3 px-6 z-49 fixed top-0 w-full">
+      <div
+        className={`py-3 px-6 z-40 fixed top-0 w-full ${
+          color
+            ? "bg-neutrals-100 bg-opacity-95 transition-all ease-in-out duration-300"
+            : ""
+        }`}
+      >
         <div className="flex justify-between items-center">
-          <div
-            className="flex items-center gap-1 bg-neutrals-400 py-2.5 px-3 rounded-[4px] text-white cursor-pointer"
-            onClick={setMenu}
-          >
-            <RiMenuLine />
-            <p className=" text-xs font-semibold">Browse</p>
-          </div>
-          <img src={logo} alt="logo" className="h-9 mr-6" />
-          <div
-            className="flex text-white text-2xl gap-4 cursor-pointer"
-            onClick={setSearch}
-          >
-            {isSearch ? (
-              <div>
-                <RiSearchLine className="text-primary" />
-              </div>
-            ) : (
-              <RiSearchLine color="text-white" />
-            )}
-            <RiAccountCircleLine />
-          </div>
-        </div>
-        <div>
-          {isSearch ? (
-            <div className="flex items-center mt-3">
-              <div className="bg-white p-2 rounded-l-[4px]">
-                <RiSearchLine />
-              </div>
-              <input
-                type="text"
-                placeholder="Enter keywords"
-                className="w-full px-3 py-1 bg-white rounded-r-[4px] font-light focus:outline-none"
-              />
+          <div className="flex items-center gap-4 ">
+            <div className="text-white cursor-pointer" onClick={setMenu}>
+              <RiMenuLine className="text-xl" />
+              {/* <p className=" text-xs font-semibold">Browse</p> */}
             </div>
-          ) : null}
+            <img src={logo} alt="logo" className="h-9 mr-6" />
+          </div>
+          <div className="flex items-center text-white gap-4 cursor-pointer text-2xl">
+            <div className="" onClick={setSearch}>
+              {isSearch ? (
+                <div>
+                  <FaSearch className="text-primary-200" />
+                </div>
+              ) : (
+                <FaSearch color="text-white" />
+              )}
+            </div>
+            {isSearch ? (
+              <div className="flex items-center text-black text-sm">
+                <input
+                  type="text"
+                  placeholder="Titles, people, genres"
+                  className="w-56 px-3 py-2 bg-white rounded-sm font-light focus:outline-none"
+                />
+              </div>
+            ) : null}
+            <RiAccountCircleFill className="text-3xl" />
+          </div>
         </div>
       </div>
 
@@ -74,7 +89,7 @@ const Header = () => {
 
       <div
         className={
-          isMenuOpen
+          !isMenuOpen
             ? "z-50 bg-black fixed top-0 bottom-0 w-[25%] p-6 space-y-16 -translate-x-96 transition-all ease-in-out duration-500"
             : "z-50 bg-black fixed top-0 bottom-0 w-[25%] p-6 space-y-16 transition-all ease-in-out duration-500"
         }
@@ -89,27 +104,31 @@ const Header = () => {
           </div>
           {/* MENU */}
           <div className="text-xs text-white font-medium space-y-8">
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary">
+            <div className="flex items-center gap-3 cursor-pointer hover:text-primary-100">
               <RiHomeHeartFill size={14} />
-              <p>Home</p>
+              <a href="/">
+                <p>Home</p>
+              </a>
             </div>
 
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary">
+            <div className="flex items-center gap-3 cursor-pointer hover:text-primary-100">
               <RiPlayCircleFill size={14} />
-              <p>Movies</p>
+              <a href="/popular">
+                <p>Movies</p>
+              </a>
             </div>
 
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary">
+            <div className="flex items-center gap-3 cursor-pointer hover:text-primary-100">
               <RiVidiconFill size={14} />
               <p>TV Shows</p>
             </div>
 
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary">
+            <div className="flex items-center gap-3 cursor-pointer hover:text-primary-100">
               <RiFireFill size={14} />
               <p>top IMDB</p>
             </div>
 
-            <div className="flex items-center gap-3 cursor-pointer hover:text-primary">
+            <div className="flex items-center gap-3 cursor-pointer hover:text-primary-100">
               <RiAndroidFill size={14} />
               <p>Android App</p>
             </div>

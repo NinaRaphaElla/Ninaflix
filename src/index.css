@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,20 +11,45 @@
 }
 
 body {
-  background-color: #1e2129;
-  font-family: "Montserrat";
+  background-color: #000000;
+  font-family: "Plus Jakarta Sans";
 }
 
 /* selection */
 ::moz-selection {
-  @apply bg-primary text-white;
+  @apply bg-primary-100 text-white;
 }
 
 ::selection {
-  @apply bg-primary text-white;
+  @apply bg-primary-100 text-white;
 }
 
 .gallery {
   display: grid;
   grid-template-column: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.slide {
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+}
+
+.current {
+  transform: translateX(0);
+}
+
+.content {
+  animation: slide-up 1s ease 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    top: 20rem;
+  }
+  100% {
+    visibility: visible;
+    top: 24rem;
+  }
 }
