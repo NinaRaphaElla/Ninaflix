@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../components/Cards.jsx";
+import Cards from "../components/Slider/Cards.jsx";
 import { FaFilter } from "react-icons/fa";
 
 const Popular = () => {

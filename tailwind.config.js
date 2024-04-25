@@ -16,6 +16,7 @@ export default {
         },
         white: "#EDEDED",
         gray: "#eee5",
+        black: "#0C0C0C",
       },
     },
   },

@@ -3,18 +3,38 @@
     {
       "image": "/src/images/Slider/BG/dune.jpg",
       "type": "Series",
-      "title": "Dune: Part Two",
+      "title": "/src/images/Slider/titles/dune.png",
       "ratings": 6.5,
       "quality": "HD",
-      "desc": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee."
+      "age": "16+",
+      "desc": "Join Paul Atreides on his epic quest for vengeance alongside Chani and the Fremen. As he confronts those who destroyed his family, he must choose between love and the fate of the universe, striving to avert a dark prophecy."
     },
     {
-      "image": "/src/images/Slider/BG/dune.jpg",
-      "type": "Series",
-      "title": "Dune: Part one",
+      "image": "/src/images/Slider/BG/madame.jpg",
+      "type": "Movie",
+      "title": "/src/images/Slider/titles/madame.png",
       "ratings": 6.5,
       "quality": "HD",
-      "desc": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee."
+      "age": "18+",
+      "desc": "Forced to confront revelations about her past, paramedic Cassandra Webb forges a relationship with three young women destined for powerful futures...if they can all survive a deadly present."
+    },
+    {
+      "image": "/src/images/Slider/BG/death-whisperer.jpg",
+      "type": "Series",
+      "title": "/src/images/Slider/titles/death-whisperer.png",
+      "ratings": 6.5,
+      "quality": "HD",
+      "age": "18+",
+      "desc": "After Yak, the elder brother returned to his hometown, he must find a way to save his younger sister from a bizarre illness that is causing her to behave differently."
+    },
+    {
+      "image": "/src/images/Slider/BG/encanto.jpg",
+      "type": "Series",
+      "title": "/src/images/Slider/titles/encanto.png",
+      "ratings": 6.5,
+      "quality": "HD",
+      "age": "13+",
+      "desc": "Encanto follows a multigenerational Colombian family, the Madrigals, led by a matriarch whose children and grandchildren—except for Mirabel Madrigal—receive magical gifts from a miracle."
     }
   ]
 }

@@ -3,8 +3,6 @@ import logo from "../images/logo.png";
 import data from "../../Data/data.json";
 
 import {
-  RiSearchLine,
-  RiAccountCircleFill,
   RiMenuLine,
   RiHomeHeartFill,
   RiPlayCircleFill,
@@ -14,7 +12,8 @@ import {
   RiArrowLeftSLine,
 } from "react-icons/ri";
 
-import { FaSearch } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
+import { BsPersonFill } from "react-icons/bs";
 
 const Header = () => {
   //state for search
@@ -48,9 +47,7 @@ const Header = () => {
       {/* Header */}
       <div
         className={`py-3 px-6 z-40 fixed top-0 w-full ${
-          color
-            ? "bg-neutrals-100 bg-opacity-95 transition-all ease-in-out duration-300"
-            : ""
+          color ? "bg-black transition-all ease-in-out duration-500" : ""
         }`}
       >
         <div className="flex justify-between items-center">
@@ -65,22 +62,22 @@ const Header = () => {
             <div className="" onClick={setSearch}>
               {isSearch ? (
                 <div>
-                  <FaSearch className="text-primary-200" />
+                  <IoSearch className="text-primary-200" />
                 </div>
               ) : (
-                <FaSearch color="text-white" />
+                <IoSearch color="text-white" />
               )}
             </div>
             {isSearch ? (
-              <div className="flex items-center text-black text-sm">
+              <div className="flex items-center text-white text-sm">
                 <input
                   type="text"
                   placeholder="Titles, people, genres"
-                  className="w-56 px-3 py-2 bg-white rounded-sm font-light focus:outline-none"
+                  className="w-56 px-3 py-2 bg-black bg-opacity-25 rounded-sm font-light focus:outline-none placeholder-white placeholder-opacity-40"
                 />
               </div>
             ) : null}
-            <RiAccountCircleFill className="text-3xl" />
+            <BsPersonFill />
           </div>
         </div>
       </div>
